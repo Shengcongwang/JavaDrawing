@@ -16,7 +16,7 @@ public class firstClick extends JPanel implements MouseListener {
     public static void main(String[] args){
         //usual graphics setup
         JFrame window = new JFrame("Graphics Demo");
-        window.setBounds(100, 100, 600, 600);
+        window.setBounds(0, 0, 1500, 900);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         firstClick b = new firstClick();
         b.setBackground(Color.WHITE);  // background color; the default color is light gray

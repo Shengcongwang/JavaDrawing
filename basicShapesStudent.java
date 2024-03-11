@@ -14,10 +14,28 @@ public class basicShapesStudent extends JPanel //don't worry about what the "ext
         //  to paint the background
         //don't worry about the "super" notation for now
         //we'll get there
-        g.setColor(Color.BLACK); //this is the drawing (pen) color. for other colors, see
+        g.setColor(Color.BLACK);
+        int col=7;
+        int row=5;
+        int n=100;
+        g.drawLine(100,100, 100+col*n, 100);
+        g.drawLine(100,100, 100, 100+row*n);
+        g.drawLine(100+col*n,100, 100+col*n, 100+row*n);
+        g.drawLine(100,100+row*n, 100+col*n, 100+row*n);
+        int currentX=0;
+        for(int i=0;i<col;i++){
+            currentX+=100;
+            g.drawLine(currentX,100, currentX, 100+row*n);
+        }
+        int currentY=0;
+        for(int i=0;i<row;i++){
+            currentY+=100;
+            g.drawLine(100,currentY, 100+col*n, currentY);
+        }
+        //this is the drawing (pen) color. for other colors, see
         //https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
         //g.drawOval(20, 20, 150, 150);
-        g.drawArc(40, 40, 150, 150, 90, 270);
+        /*g.drawArc(40, 40, 150, 150, 90, 270);
         g.drawLine(115, 40, 115, 115);
         g.drawLine(190, 115, 115, 115);
         g.drawRect(40, 350, 150, 100);
@@ -125,7 +143,7 @@ public class basicShapesStudent extends JPanel //don't worry about what the "ext
         JFrame window = new JFrame("Graphics Demo");
         // Set this window's location and size:
         // upper-left corner at 300, 300; width 600, height 400
-        window.setBounds(100, 100, 1000, 800);
+        window.setBounds(0, 0, 1500, 900);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //stops the window when you close it
 
         //creates a basicShapes object
